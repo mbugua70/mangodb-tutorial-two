@@ -1,0 +1,10 @@
+// mangodb
+
+// an app should use single MongoClient instance for all dtbase request
+// creating MongoClient is resource intensive
+// creating a new MongoClient for each request will affect the application perfomance
+
+// troubleshooting a MongoDB connection in node.js application
+
+- this could be due to newtwork access error
+- or user authentication errors
