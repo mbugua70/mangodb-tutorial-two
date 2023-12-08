@@ -8,3 +8,52 @@
 
 - this could be due to newtwork access error
 - or user authentication errors
+
+BSON
+- optimized to retrival, storage and transmission across the wire.
+-more secure than text json
+
+Documenent
+- used for storing data in mangodb
+
+CRUD OPERATION  IN mangodb
+
+-insertOne() - to insert a single doc into the collection.
+
+Insert a Document
+To insert a single document into a collection, append insertOne() to the collection variable. The insertOne() method accepts a document as an argument and returns a promise. In this example, the document that's being inserted is stored in a variable called sampleAccount, which is declared just above the main() function.
+
+-insertMany() - used to insert many doc into a collection
+
+Insert Many Documents
+To insert more than one document, append the insertMany() method to the collection object, and then pass an array of documents to the insertMany() method. The insertMany() method returns a promise. We await the promise to get the result of the operation, which we then use to log the number of documents that are inserted to the console. In this example, the accounts to be inserted are stored in an array variable called sampleAccounts. This variable is defined just above the main() function
+
+-insertedCount - used to count the number of doc inserted into the databse
+
+
+// QUERYING a mangodb collection in node.js
+
+// retrieving doc from the mangodb collection we will use the follwing methods
+- find()
+
+Using find()
+The find() method is a read operation that returns a cursor to the documents that match the query. The find() method takes a query or filter document as an argument. If you do not specify a query document, the find() method returns all documents in the collection.
+
+-findOne()
+
+Using findOne()
+In this example, we return a single document from a query, which is assigned to a variable called documentToFind. We use the findOne() method on the collection object to return the first document that matches the filter criteria, which are defined in the documentToFind variable.
+
+-find()
+-accept the query document
+-matches the doc in the collection you want to find
+
+nb: query operation are expressd as filters
+
+
+// UPDATING DOCS IN mangodb AND NODE.js
+// the methods used are:
+-updateOne()
+- we use it to a update values that matched some single criteria
+-accept query filter and some update instruction
+-updateMany();
