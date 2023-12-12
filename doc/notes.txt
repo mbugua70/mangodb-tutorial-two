@@ -56,4 +56,36 @@ nb: query operation are expressd as filters
 -updateOne()
 - we use it to a update values that matched some single criteria
 -accept query filter and some update instruction
+
+In this example, we use the updateOne() to update the value of an existing field in a document. Append the updateOne() method to the collection object to update a single document that matches the filter criteria, which are stored in the documentToUpdate variable. The update document contains the changes to be made and is stored in the update variable.
+
+
 -updateMany();
+
+In this example, we update many documents by adding a value to the transfers_complete array of all checking account documents. The updateMany() method is appended to the collection object. The method accepts a filter that matches the document(s) that we want to update and an update statement that instructs the driver how to change the matching document. Both the filter and the update documents are stored in variables. The updateMany() method updates all the documents in the collection that match the filter.
+
+// to update field with arrays values we can use ie { scores: [1, 1, 1, 23]}
+   - $push
+   - $pull
+   - $pop
+
+
+// deleting a doc from collection
+
+-deleteOne()
+To delete a single document from a collection, use the deleteOne() method on a collection object. This method accepts a query filter that matches the document that you want to delete. If you do not specify a filter, MongoDB matches and deletes the first document in the collection. Here's an example:
+
+-deleteMany()
+
+You can delete multiple documents from a collection in a single operation by calling the deleteMany() method on a collection object. To specify which documents to delete, pass a query filter that matches the documents that you want to delete. If you provide an empty document, MongoDB matches all documents in the collection and deletes them. In the following example, we delete all accounts with a balance of less than 500 by using a query filter. Then, we print the total number of deleted documents.
+
+
+/* Multidocument transaction */
+- Are group of database operation that will be completed together as a unit or not at all
+-used when a group of operation must succeed or fail together.
+
+-- steps to complete a transaction --
+  - start session - logical group or series of operation that should go together
+  - define transaction operation
+  -sequence of operation to perform inside a transaction
+  - release resources that hve been used by the transaction

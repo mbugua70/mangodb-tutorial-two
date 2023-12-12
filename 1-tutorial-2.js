@@ -21,17 +21,31 @@ const connectToDatabase = async () => {
 
 const simpleAccount = [
   {
-    account_holder: "john doe",
-    account_id: "jh35054886",
+    account_holder: "john hg doe",
+    account_id: "jh350jfj54886",
     account_type: "checking",
     balance: 459909,
     last_updated: new Date(),
   },
   {
-    account_holder: "john doe child",
-    account_id: "jg35643463",
+    account_holder: "john khkj doe child",
+    account_id: "jg356ljl43463",
     account_type: "savings",
     balance: 4009909,
+    last_updated: new Date(),
+  },
+  {
+    account_holder: "john ljlk doe child",
+    account_id: "jg356lj43463",
+    account_type: "savings",
+    balance: 9909,
+    last_updated: new Date(),
+  },
+  {
+    account_holder: "john hojk doe child",
+    account_id: "jg35643463",
+    account_type: "savings",
+    balance: 9909,
     last_updated: new Date(),
   },
 ];
