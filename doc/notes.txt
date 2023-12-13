@@ -89,3 +89,9 @@ You can delete multiple documents from a collection in a single operation by cal
   - define transaction operation
   -sequence of operation to perform inside a transaction
   - release resources that hve been used by the transaction
+
+
+--- perfoming aggregation --
+--syntax
+   - const pipeline = [stage1, stage2, stage3]
+   - db.collection.aggregate(pipeline)
